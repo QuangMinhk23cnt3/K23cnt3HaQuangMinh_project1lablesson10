@@ -15,7 +15,7 @@ class HqmNhaCCTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = faker::create();
+        $faker = Faker::create();
         foreach(range(1,100) as $index){
             DB::table('hqmnhacc')->insert([
                 'hqmMaNCC'=>$faker->uuid(),

@@ -1,7 +1,7 @@
 <?php
-
+use App\Http\Controllers\HqmNhaCCController;
+use App\Http\Controllers\HqmVattuController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hqm-nhaccs',[HqmNhaCCController::class,'list']);
+
+Route::get('/hqm-vattus',[HqmVattuController::class,'list']);
